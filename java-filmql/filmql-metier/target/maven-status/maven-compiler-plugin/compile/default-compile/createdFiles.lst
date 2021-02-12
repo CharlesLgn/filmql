@@ -1,0 +1,6 @@
+org\exemple\filmql\businessobject\Actor.class
+org\exemple\filmql\businessobject\Person.class
+org\exemple\filmql\businessobject\Film.class
+org\exemple\filmql\type\FilmStatus.class
+org\exemple\filmql\businessobject\Director.class
+org\exemple\filmql\businessobject\Role.class

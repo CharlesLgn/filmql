@@ -1,0 +1,13 @@
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\typewiring\ActorTypeWiring.java
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\typewiring\RoleTypeWiring.java
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\datafetcher\ActorDataFetcher.java
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\typewiring\DirectorTypeWiring.java
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\datafetcher\RoleDataFetcher.java
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\GraphQLSchemaBuilder.java
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\typewiring\FilmTypeWiring.java
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\typewiring\MutationTypeWiring.java
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\datafetcher\FilmDataFetcher.java
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\datafetcher\DirectorDataFetcher.java
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\datafetcher\PersonDataFetcher.java
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\typewiring\QueryTypeWiring.java
+D:\Project\java-filmql\filmql-graph\src\main\java\org\exemple\filmql\graphql\GraphQuery.java

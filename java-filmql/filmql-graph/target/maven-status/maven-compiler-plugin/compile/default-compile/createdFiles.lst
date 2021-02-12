@@ -1,0 +1,15 @@
+org\exemple\filmql\graphql\typewiring\RoleTypeWiring.class
+org\exemple\filmql\graphql\datafetcher\ActorDataFetcher.class
+org\exemple\filmql\graphql\GraphQLSchemaBuilder.class
+org\exemple\filmql\graphql\typewiring\MutationTypeWiring.class
+org\exemple\filmql\graphql\GraphQLSchemaBuilder$GraphQLSchemaHolder.class
+org\exemple\filmql\graphql\datafetcher\FilmDataFetcher.class
+org\exemple\filmql\graphql\typewiring\FilmTypeWiring.class
+org\exemple\filmql\graphql\datafetcher\PersonDataFetcher.class
+org\exemple\filmql\graphql\typewiring\ActorTypeWiring.class
+org\exemple\filmql\graphql\datafetcher\RoleDataFetcher.class
+org\exemple\filmql\graphql\GraphQuery.class
+org\exemple\filmql\graphql\typewiring\QueryTypeWiring.class
+org\exemple\filmql\graphql\GraphQLSchemaBuilder$1.class
+org\exemple\filmql\graphql\typewiring\DirectorTypeWiring.class
+org\exemple\filmql\graphql\datafetcher\DirectorDataFetcher.class

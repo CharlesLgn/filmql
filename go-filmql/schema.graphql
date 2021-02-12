@@ -1,0 +1,74 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+interface Person {
+    dateOfBirth: Date!
+    dateOfDeath: Date
+    firstName: String!
+    id: Int!
+    lastName: String!
+}
+
+type Actor implements Person {
+    roles: [Role!]
+    dateOfBirth: Date!
+    dateOfDeath: Date
+    firstName: String!
+    id: Int!
+    lastName: String!
+}
+
+type Director implements Person {
+    dateOfBirth: Date!
+    dateOfDeath: Date
+    lastName: String!
+    firstName: String!
+    films: [Film]!
+    id: Int!
+}
+
+type Film {
+    actors: [Actor]!
+    director: Director!
+    id: Int!
+    originalTitle: String!
+    status: FilmStatus!
+    title: String!
+}
+
+enum FilmStatus {
+    IN_PROGRESS
+    RELEASED
+    ABANDONED
+}
+
+type Mutation {
+    createFilm(film: FilmInput!): Film
+}
+
+type Query {
+    actor(id: Int!): Actor
+    director(id: Int!): Director
+    film(id: Int!): Film
+    films: [Film]
+    people: [Person]
+}
+
+type Role {
+    film: Film!
+    characterName: String!
+}
+
+input FilmInput {
+    originalTitle: String
+    status: FilmStatus
+    title: String
+}
+
+
+"An RFC-3339 compliant Full Date Scalar"
+scalar Date
