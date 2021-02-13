@@ -1,4 +1,4 @@
-#FilmQL 🎬 ![GraphQL Icon](./logo_small.png) ![Univ Lorriane](./Logo_Univ.png)
+# FilmQL 🎬 ![GraphQL Icon](./logo_small.png) ![Univ Lorriane](./Logo_Univ.png)
 
 
 
