@@ -26,10 +26,4 @@ public class GraphQLServlet extends HttpServlet {
   public Response getQuery(@QueryParam("operationName") String operationName, @QueryParam("query") String query, @QueryParam("variables") String variables) {
     return runQuery(new GraphQuery(operationName, query, variables));
   }
-
-  @GET
-  @Path("/hello")
-  public Response hello() {
-    return Response.ok().entity("hello").build();
-  }
 }

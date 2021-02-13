@@ -1,6 +1,10 @@
 package graph
 
-import "github.com/graphql-go/graphql"
+import (
+	"github.com/graphql-go/graphql"
+
+	"../structure"
+)
 
 var filmType = graphql.NewObject(
 	graphql.ObjectConfig{
@@ -19,6 +23,35 @@ var filmType = graphql.NewObject(
 	},
 )
 
+var personType = graphql.NewInterface(
+	graphql.InterfaceConfig{
+		Name: "Person",
+		Fields: graphql.Fields{
+			"id": &graphql.Field{
+				Type: graphql.Int,
+			},
+			"dateOfBirth": &graphql.Field{
+				Type: graphql.DateTime,
+			},
+			"dateOfDeath": &graphql.Field{
+				Type: graphql.DateTime,
+			},
+			"firstName": &graphql.Field{
+				Type: graphql.String,
+			},
+			"lastName": &graphql.Field{
+				Type: graphql.String,
+			},
+		},
+		ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
+			_, ok := p.Value.(structure.Director)
+			if ok {
+				return directorType
+			}
+			return actorType
+		},
+	},
+)
 
 var actorType = graphql.NewObject(
 	graphql.ObjectConfig{
@@ -62,6 +95,10 @@ var directorType = graphql.NewObject(
 			"lastName": &graphql.Field{
 				Type: graphql.String,
 			},
+		},
+		IsTypeOf: func(p graphql.IsTypeOfParams) bool {
+			_, ok := p.Value.(structure.Director)
+			return ok
 		},
 	},
 )

@@ -68,8 +68,8 @@ public class FilmDataFetcher {
   public static DataFetcher<Film> createFilmDataFetcher() {
     return env -> {
       Map<String, String> map = env.getArgument("film");
-      FilmInput input = new FilmInput(map.get("originalTitle"), FilmStatus.valueOf(map.get("status")), map
-          .get("title"));
+      FilmInput input = new FilmInput(map.get("originalTitle"), FilmStatus.valueOf(map.get("status")),
+          map.get("title"));
       Film film = new Film("3", input.getTitle(), input.getOriginalTitle(), LocalDate.now(), input.getStatus());
       DataGame.getFilms().add(film);
       return film;

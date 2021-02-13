@@ -43,6 +43,10 @@ func initGraph() graphql.Schema {
 				},
 			},
 		},
+		"people": &graphql.Field{
+			Type:    graphql.NewList(personType),
+			Resolve: resolver.GetPeople,
+		},
 	}
 	rootQuery := graphql.ObjectConfig{Name: "RootQuery", Fields: field}
 	schemaConfig := graphql.SchemaConfig{Query: graphql.NewObject(rootQuery)}
