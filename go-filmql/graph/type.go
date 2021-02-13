@@ -43,19 +43,13 @@ var personType = graphql.NewInterface(
 				Type: graphql.String,
 			},
 		},
-		ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
-			_, ok := p.Value.(structure.Director)
-			if ok {
-				return directorType
-			}
-			return actorType
-		},
 	},
 )
 
 var actorType = graphql.NewObject(
 	graphql.ObjectConfig{
 		Name: "Actor",
+		Interfaces: []*graphql.Interface{personType},
 		Fields: graphql.Fields{
 			"id": &graphql.Field{
 				Type: graphql.Int,
@@ -73,12 +67,17 @@ var actorType = graphql.NewObject(
 				Type: graphql.String,
 			},
 		},
+		IsTypeOf: func(p graphql.IsTypeOfParams) bool {
+			_, ok := p.Value.(structure.Actor)
+			return ok
+		},
 	},
 )
 
 var directorType = graphql.NewObject(
 	graphql.ObjectConfig{
 		Name: "Director",
+		Interfaces: []*graphql.Interface{personType},
 		Fields: graphql.Fields{
 			"id": &graphql.Field{
 				Type: graphql.Int,
